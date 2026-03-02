@@ -6,6 +6,21 @@
     <title>Games</title>
 </head>
 <body>
+    <a href="/">Voltar</a>
     <h1>Games disponíveis</h1>
+    <h2>Jogo em destaque</h2>
+    <p>Game mais jogado pelos usuários</p>
+    <ul>
+        <li>Titulo: <strong>{{titulo}}</strong></li>
+        <li>Ano: <strong>{{ano}}</strong></li>
+        <li>Categoria: <strong>{{categoria}}</strong></li>
+        <p>O jogo {{titulo}} tem {{2026-ano}} anos!</p>
+    </ul>
+    <h3>Top Players (Ranking de jogadores)</h3>
+    <ol>
+        {% for jogador in jogadores: %}
+        <li>{{jogador}}</li>
+        {% endfor %}
+    </ol>
 </body>
 </html>
