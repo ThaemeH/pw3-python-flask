@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at top, #0f0f1f, #050510);
+    color: #eaeaf0;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+/* NAVBAR GLASS */
+.navbar {
+    background: rgba(20, 20, 40, 0.6);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.navbar-brand {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #7f5af0, #00c2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* LINKS */
+.nav-link {
+    color: #aaa !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #00c2ff !important;
+}
+
+/* SEARCH */
+.form-control {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: white;
+    border-radius: 20px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 10px #00c2ff;
+    border-color: #00c2ff;
+}
+
+/* BOTÃO */
+.btn-outline-primary {
+    border-radius: 20px;
+    border: 1px solid #7f5af0;
+    color: #7f5af0;
+}
+
+.btn-outline-primary:hover {
+    background: linear-gradient(90deg, #7f5af0, #00c2ff);
+    color: white;
+    border: none;
+}
+
+/* CONTAINER */
+.container {
+    padding: 50px 20px;
+}
+
+/* CARD ESTILO PLAYER */
+.card {
+    background: rgba(255,255,255,0.04);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 25px;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* brilho animado */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, transparent, rgba(127,90,240,0.3), transparent);
+    transform: rotate(25deg);
+    top: -100%;
+    left: -100%;
+    transition: 0.5s;
+}
+
+.card:hover::before {
+    top: 100%;
+    left: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+}
+
+/* TÍTULOS */
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-top: 30px;
+    background: linear-gradient(50deg, #7f5af0, #00c2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h3 {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-top: 30px;
+    background: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* TEXTO */
+p {
+    color: #b5b5c5;
+}
+
+/* FOOTER */
+footer {
+    background: rgba(10,10,20,0.8);
+    backdrop-filter: blur(10px);
+    color: #777;
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* SCROLL */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#7f5af0, #00c2ff);
+    border-radius: 10px;
+}
+
+/* DETALHE MUSICAL (onda decorativa) */
+body::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(transparent, rgba(127,90,240,0.2));
+    pointer-events: none;
+}

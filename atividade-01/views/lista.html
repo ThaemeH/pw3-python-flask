@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+{% block content %}
+ <link rel="stylesheet" href="{{url_for('static', filename='/css/styles_lista.css')}}">
+<h1>Lista de músicas</h1>
+
+<table class="tabela-musicas">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Artista</th>
+            <th>Nota</th>
+            <th>Resenha</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for musica in musicas %}
+        <tr>
+            <td>{{ musica.nome }}</td>
+            <td>{{ musica.artista }}</td>
+            <td>{{ musica.nota }}</td>
+            <td>{{ musica.resenha }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}

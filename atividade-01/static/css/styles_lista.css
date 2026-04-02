@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+    font-family: 'Poppins', sans-serif;
+    color: #eee;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 30px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #7f5af0, #00c2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* TABELA */
+.tabela-musicas {
+    margin: auto;
+    border-collapse: collapse;
+    width: 70%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* CABEÇALHO */
+.tabela-musicas th {
+    background: linear-gradient(90deg, #7f5af0, #00c2ff);
+    color: white;
+    padding: 15px;
+    font-weight: 500;
+}
+
+/* CÉLULAS */
+.tabela-musicas td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* LINHA HOVER */
+.tabela-musicas tr:hover {
+    background: rgba(127, 90, 240, 0.15);
+    transition: 0.3s;
+}
+
+/* IMAGENS */
+.tabela-musicas img {
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.tabela-musicas img:hover {
+    transform: scale(1.1);
+}
+
+/* CONTAINER */
+.container {
+    margin-top: 30px;
+}

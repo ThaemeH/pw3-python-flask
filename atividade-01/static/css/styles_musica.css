@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+    font-family: 'Poppins', sans-serif;
+    color: #eee;
+}
+
+/* Container do formulário */
+.form-container {
+    width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* Título */
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #7f5af0, #00c2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Inputs */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    margin-bottom: 15px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 8px #7f5af0;
+}
+
+/* Botão */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #7f5af0, #00c2ff);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #7f5af0;
+}

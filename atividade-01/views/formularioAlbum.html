@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+{% block content %}
+ <link rel="stylesheet" href="{{url_for('static', filename='/css/styles_musica.css')}}">
+
+<div class="form-container">
+    <h1>Cadastrar Álbum</h1>
+
+    <form action="/cadastrarMusica" method="POST">
+        
+        <label>Nome do álbum:</label>
+        <input type="text" name="nome" required>
+
+        <label>Artista:</label>
+        <input type="text" name="artista" required>
+
+        <label>Nota:</label>
+        <input type="number" name="nota" required>
+
+        <label>Resenha:</label>
+        <textarea name="resenha"></textarea>
+
+        <button type="submit">Cadastrar</button>
+
+    </form>
+</div>
+
+{% endblock content %}
