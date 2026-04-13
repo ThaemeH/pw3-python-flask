@@ -43,12 +43,16 @@ def init_app(app):
     # CADASTRAR ALBUM
     @app.route('/cadastrarAlbum', methods=['POST'])
     def cadastrarAlbum():
-        nome_album = request.form.get('nome_album')
-        artista_album = request.form.get('artista_album')
+        nome = request.form.get('nome')
+        artista = request.form.get('artista')
+        nota = request.form.get('nota')
+        resenha = request.form.get('resenha')
 
         album = {
-            'nome_album': nome_album,
-            'artista_album': artista_album
+            'nome': nome,
+            'artista': artista,
+            'nota': nota,
+            'resenha': resenha,
         }
 
         albuns.append(album)

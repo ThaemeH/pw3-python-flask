@@ -24,4 +24,27 @@
     </tbody>
 </table>
 
+<h1>Lista de albúns</h1>
+
+<table class="tabela-albuns">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Artista</th>
+            <th>Nota</th>
+            <th>Resenha</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for album in albuns %}
+        <tr>
+            <td>{{ album.nome }}</td>
+            <td>{{ album.artista }}</td>
+            <td>{{ album.nota }}</td>
+            <td>{{ album.resenha }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
 {% endblock content %}
