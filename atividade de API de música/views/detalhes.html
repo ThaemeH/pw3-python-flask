@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container" style="background-color: #f0f0f0; border-radius: 8px; padding: 20px;">
+    <div class="row">
+        <div class="col-md-6 m-auto">
+            <a href="{{url_for('home')}}" class="btn btn-dark">
+                Voltar para o catálogo
+            </a><br><br>
+            <div class="card">
+                <img src="{{musicaInfo.artworkUrl600}}" class="card-img-top" alt="Capa do álbum">
+                <div class="card-body m-auto">
+                    <h3>{{musicaInfo.trackName}}</h3>
+                    <p>Artista: {{musicaInfo.artistName}}</p>
+                    <p>Álbum: {{musicaInfo.collectionName}}</p>
+                    <p>Gênero: {{musicaInfo.primaryGenreName}}</p>
+
+                    <audio controls>
+                        <source src="{{musicaInfo.previewUrl}}" type="audio/mpeg">
+                        Seu navegador não suporta a reprodução de áudio.
+                    </audio><br><br>
+
+                    <a href="{{musicaInfo.trackViewUrl}}" class="btn btn-dark" target="_blank">Ouvir na Apple Music</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
